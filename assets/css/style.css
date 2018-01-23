@@ -1,0 +1,96 @@
+
+
+body {
+    background-image: url("../images/background.jpg");
+    background-size: 100%;
+
+}
+
+p {
+    font-size: 25px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+    margin-top: 200px;
+    
+}
+
+#header-one {
+    color: white;
+    font-size: 80px;
+    font-family: 'VT323', monospace;
+}
+
+.font {
+    font-family: 'VT323', monospace;
+}
+
+#button {
+    width: 300px;
+    background-color: red;
+    font-size: 30px;
+    border-color: red;
+
+}
+
+.button {
+    width: 300px;
+    background-color: red;
+    font-size: 30px;
+    border-color: red;
+}
+
+#button:hover {
+    background-color: rgb(189, 0, 0);
+}
+
+#button:active {
+    background-color: red;
+}
+
+.main-button-container {
+    margin-top: 175px;
+    max-width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.container {
+    background-color: rgb(199, 3, 3);
+    width: 70%;
+    text-align: center;
+    float: center;
+
+}
+
+.text-center {
+    text-align: center;
+    color: white;
+  
+}
+
+.answer {
+    padding-top: 7px;
+    height: 45px;
+    color: black;
+    padding-left: 14px;
+    background-color: red;
+    border-radius:14px;
+    margin-left:200px;
+    margin-right:200px;
+    text-align: center;
+    
+  }
+
+  .answer:hover {
+    background: rgb(189, 0, 0);
+  }
+
+#timer {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+
+}

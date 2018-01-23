@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <title>Trivia</title>
+</head>
+<body>
+    <div id="timer">
+        
+    </div>
+
+    
+    <div id="content">
+        <!--
+         <div class="jumbotron">
+            <h1 class="display-4 font" id="header-one">Welcome To Trivia!</h1><br>
+            <a class="btn btn-primary btn-lg font" id="button" href="#" role="button">Play</a>
+            
+        </div> 
+
+
+        JAVASCRIPT
+        $("#button").click(function() {
+    $("#content").replaceWith("<div class='jumbotron container'></div>");
+    var questions = [];
+    questions[0] = "What famous actor became Governor of California in 2003?";
+    questions[1] = "In the first two Jaws films, what was the police cheifs name?";
+    questions[2] = "Which actor was the star in the Titanic";
+
+    var answers = [];
+    answers[0] = "Arnold Schwarzenegger";
+    answers[1] = "Martin Brody";
+    answers[2] = "Leonardo Decaprio";
+
+    $.each(questions , function (index, value){
+        console.log(questions + '<br>' + answers); 
+      });
+        
+    
+    
+})
+
+
+var count=60;
+
+var counter=setInterval(timer, 1000);
+
+function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(cdounter);
+     return;
+  }
+
+ $("#timer").html("00:" + count) 
+}
+
+    -->
+  
+        
+    </div>
+
+
+
+
+<script src="assets/javascript/app.js"></script> 
+</body>
+</html>
