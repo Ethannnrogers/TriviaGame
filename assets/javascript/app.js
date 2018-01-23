@@ -39,33 +39,33 @@ $(document).ready(function(){
     
 
     function generateHTML() {
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: 00:<span class='timer'>30</span></p><p class='text-center'>" + questions[unansweredQuestions] + "</p><p class='first-answer answer'>A. " + answers[unansweredQuestions][0]+ "</p><p class='answer'>B. "+answers[unansweredQuestions][1]+"</p><p class='answer'>C. "+answers[unansweredQuestions][2]+"</p><p class='answer'>D. "+answers[unansweredQuestions][3]+"</p>";
+        gameHTML = "<p class='text-center timer'><span class='timer'>30</span></p><p class='text-center'>" + questions[unansweredQuestions] + "</p><p class='first-answer answer'>A. " + answers[unansweredQuestions][0]+ "</p><p class='answer'>B. "+answers[unansweredQuestions][1]+"</p><p class='answer'>C. "+answers[unansweredQuestions][2]+"</p><p class='answer'>D. "+answers[unansweredQuestions][3]+"</p>";
         $("#content").html(gameHTML);
     }
 
     function generateWin() {
         correctAnswers++;
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: 00:<span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Correct!</p>";
+        gameHTML = "<p class='text-center timer'><span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Correct!</p>";
         $("#content").html(gameHTML);
         setTimeout(pause, 4000);  
     }
 
     function generateLoss() {
         wrongAnswers++;
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: 00:<span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[unansweredQuestions] + "</p>";
+        gameHTML = "<p class='text-center timer'><span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[unansweredQuestions] + "</p>";
         $("#content").html(gameHTML);
         setTimeout(pause, 4000); 
     }
 
     function generateLossDueToTimeOut() {
         unansweredQuestions++;
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: 00:<span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + correctAnswers[unansweredQuestions] + "</p>" ;
+        gameHTML = "<p class='text-center timer'><span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + correctAnswers[unansweredQuestions] + "</p>" ;
         $("#content").html(gameHTML);
         setTimeout(pause, 4000); 
     }
 
     function pause() {
-        if (questionsAnswered < 5) {
+        if (questionsAnswered < 4) {
         unansweredQuestions++;
         generateHTML();
         counter = 30;
