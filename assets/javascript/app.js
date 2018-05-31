@@ -47,7 +47,8 @@ $(document).ready(function(){
         correctAnswers++;
         gameHTML = "<p class='text-center timer'><span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Correct!</p>";
         $("#content").html(gameHTML);
-        setTimeout(pause, 4000);  
+        setTimeout(pause, 4000); 
+        finalScreen(); 
     }
 
     function generateLoss() {
@@ -55,6 +56,7 @@ $(document).ready(function(){
         gameHTML = "<p class='text-center timer'><span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[unansweredQuestions] + "</p>";
         $("#content").html(gameHTML);
         setTimeout(pause, 4000); 
+        finalScreen();
     }
 
     function generateLossDueToTimeOut() {
@@ -91,8 +93,8 @@ $(document).ready(function(){
     }
 
     function finalScreen() {
-        gameHTML = "<p class='text-center timer-p font'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctAnswers + "</p>" + "<p>Wrong Answers: " + incorrectAnswers + "</p>" + "<p>Unanswered: " + unansweredQuestions + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button button' href='#' role='button'>Reset The Quiz!</a></p>";
-        $(".content").html(gameHTML);
+        gameHTML = "<p class='text-center timer-p font'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctResponse + "</p>" + "<p>Wrong Answers: " + wrongAnswers + "</p>" + "<p>Unanswered: " + unansweredQuestions + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button button' href='#' role='button'>Reset The Quiz!</a></p>";
+        $("#content").html(gameHTML);
     }
 
 
